@@ -14,6 +14,7 @@ public class ValidatorService {
         }
 
     }
+
     private static void check(String login, String password,
                               String confirmPassword) throws WrongLoginException, WrongPasswordException {
         if (login == null || login.length() > 20) {
@@ -28,6 +29,7 @@ public class ValidatorService {
         checkWrong(password, false);
         checkWrong(login, true);
     }
+
     private static void checkWrong(String string, boolean login)
             throws WrongLoginException, WrongPasswordException {
         for (int i = 0; i < string.length(); i++) {
